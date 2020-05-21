@@ -1,4 +1,4 @@
-# Notebook_Tutorials
+# Notebook Tutorials
 
 The conda environment used in these tutorials can be created using the following command:
 ```
@@ -10,6 +10,7 @@ conda activate cmelab
 jupyter lab
 ```
 
-TODO: 
-Docker image?
-Notebook descriptions
+## Tutorials
+
+1. The `opv_sim.ipynb` notebook demonstrates how to set up, run, and analyze a molecular dynamics simulation of a conjugated polymer. The following tools from [MoSDeF](https://mosdef.org/) and [Glotzer group](https://github.com/glotzerlab) are higlighted: 
+[mbuild](https://mbuild.mosdef.org/en/stable/), [foyer](https://foyer.mosdef.org/en/latest/), [hoomd](https://hoomd-blue.readthedocs.io/en/stable/), [freud](https://freud.readthedocs.io/en/stable/fresnel), [fresnel](https://fresnel.readthedocs.io/en/stable/)
