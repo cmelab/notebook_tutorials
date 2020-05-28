@@ -1,5 +1,7 @@
 import random
 import warnings
+import sys
+import io
 
 import matplotlib.cm
 import matplotlib.colors as mplcolors
@@ -12,6 +14,7 @@ import fresnel
 import freud
 import mbuild as mb
 import PIL
+import IPython
 
 device = fresnel.Device(mode='cpu');
 preview_tracer = fresnel.tracer.Preview(device, 300, 300)
