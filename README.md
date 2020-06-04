@@ -4,7 +4,7 @@
 
 Use the binder above to use these notebooks in your browser.
 
-The conda environment used in these tutorials can be created using the following command:
+Or if you'd like to run these notebooks on your local machine, the conda environment used in these tutorials can be created using the following command:
 ```
 conda env create -f environment.yml
 ```
