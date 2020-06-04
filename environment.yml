@@ -5,6 +5,7 @@ channels:
   - omnia
 dependencies:
   - python=3.7
+  - pip
   - matplotlib
   - numpy
   - parmed
