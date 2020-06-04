@@ -1,0 +1,20 @@
+name: cmelab
+channels:
+  - conda-forge
+  - mosdef
+  - omnia
+dependencies:
+  - python=3.7
+  - matplotlib
+  - numpy
+  - parmed
+  - foyer
+  - freud
+  - fresnel
+  - gsd
+  - mbuild
+  - hoomd
+  - openbabel
+  - py3Dmol
+  - nodejs>=10
+  - jupyterlab
