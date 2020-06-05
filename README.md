@@ -1,6 +1,6 @@
 # Notebook Tutorials
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mikemhenry/notebook_tutorials/mikemhenry-patch-1)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cmelab/notebook_tutorials/master)
 
 Use the binder above to use these notebooks in your browser.
 
