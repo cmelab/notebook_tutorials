@@ -1,8 +1,12 @@
 # Notebook Tutorials
 
-The conda environment used in these tutorials can be created using the following command:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cmelab/notebook_tutorials/master)
+
+Use the binder above to use these notebooks in your browser.
+
+Or if you'd like to run these notebooks on your local machine, the conda environment used in these tutorials can be created using the following command:
 ```
-conda create -yn cmelab -c conda-forge -c mosdef -c omnia 'python=3.7' matplotlib numpy parmed foyer freud fresnel gsd mbuild hoomd openbabel py3Dmol 'nodejs>=10' jupyterlab
+conda env create -f environment.yml
 ```
 Once your environment has been created, the environment can be activated and the interactive notebooks run using the following commands:
 ```
