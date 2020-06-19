@@ -32,8 +32,10 @@ jobs:
     
     - name: check env
       run: |
+          conda activate cmelab
           conda info
           conda list
+          which python
         
     - name: test notebooks
       run: |
