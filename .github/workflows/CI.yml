@@ -128,5 +128,5 @@ jobs:
       run: python -m pip install nbval pytest
     
     - name: test notebooks
-      run: py.test --nbval-lax
+      run: pytest --nbval-lax
 
