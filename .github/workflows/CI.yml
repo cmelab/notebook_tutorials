@@ -34,6 +34,7 @@ jobs:
       run: |
           conda create -n cmelab
           conda init bash
+          exec bash
           conda activate cmelab
           conda info
           conda list
