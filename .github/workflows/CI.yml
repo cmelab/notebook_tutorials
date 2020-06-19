@@ -22,20 +22,15 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     
-    #- name: setup miniconda
-    #  uses: goanpeca/setup-miniconda@v1.6.0
-    #  with:
-    #    # https://github.com/goanpeca/setup-miniconda
-    #    activate-environment: cmelab
-    #    environment-file: environment.yml
-    #    #auto-activate-base: false
-    
-    - name: check env
+    - name: setup miniconda
+      uses: goanpeca/setup-miniconda@v1.6.0
+      with:
+        # https://github.com/goanpeca/setup-miniconda
+        activate-environment: cmelab
+        environment-file: environment.yml
+        auto-activate-base: false
+    - shell: bash -l {0}
       run: |
-          conda create -n cmelab
-          conda init bash
-          . /home/runner/.bashrc
-          conda activate cmelab
           conda info
           conda list
           which python
