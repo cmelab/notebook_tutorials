@@ -33,6 +33,7 @@ jobs:
     - name: check env
       run: |
           conda create -n cmelab
+          conda init $SHELL
           conda activate cmelab
           conda info
           conda list
