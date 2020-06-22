@@ -20,4 +20,4 @@ dependencies:
   - nodejs>=10
   - jupyterlab
   - pip:
-    - git+https://github.com/rsdefever/GAFF-foyer
+    - "--editable=git+https://github.com/rsdefever/GAFF-foyer.git#egg=gaff_foyer-master"
