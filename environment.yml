@@ -18,6 +18,12 @@ dependencies:
   - py3Dmol
   - nodejs>=10
   - jupyterlab
+  - openmm
+  - parmed
+  - networkx >=2.0
+  - lark-parser
+  - requests
+  - lxml
   - pip:
     - "--editable=git+https://github.com/rsdefever/GAFF-foyer.git#egg=gaff_foyer-master"
     - git+https://github.com/mosdef-hub/foyer
