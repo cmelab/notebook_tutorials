@@ -9,7 +9,6 @@ dependencies:
   - matplotlib
   - numpy
   - parmed
-  - foyer
   - freud
   - fresnel
   - gsd
@@ -21,3 +20,4 @@ dependencies:
   - jupyterlab
   - pip:
     - "--editable=git+https://github.com/rsdefever/GAFF-foyer.git#egg=gaff_foyer-master"
+    - git+https://github.com/mosdef-hub/foyer
