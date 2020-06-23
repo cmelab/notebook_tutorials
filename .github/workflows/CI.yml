@@ -41,7 +41,5 @@ jobs:
       shell: bash -l {0}
       run: |
           python -m pip install nbval pytest
-          head -1 /usr/share/miniconda/envs/cmelab/lib/python3.7/site-packages/gafffoyer.egg-link
-          ls $(head -1 /usr/share/miniconda/envs/cmelab/lib/python3.7/site-packages/gafffoyer.egg-link)/gafffoyer/xml
-          #python -m pytest -v --nbval-lax
+          python -m pytest -v --nbval-lax
 
