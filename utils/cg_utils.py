@@ -233,7 +233,8 @@ def gsd_rdf(gsdfile, A_name, B_name, start=0, stop=None, rmax=None, bins=50):
     -------
     freud.density.RDF
     """
-    f = gsd.pygsd.GSDFile(open(gsdfile, "rb"))
+    with open(gsdfile, "rb") as file:
+        f = gsd.pygsd.GSDFile(file)
     t = gsd.hoomd.HOOMDTrajectory(f)
     snap = t[0]
     if start < -len(t):
@@ -666,7 +667,8 @@ class CG_Compound(mb.Compound):
         -------
         CG_Compound
         """
-        f = gsd.pygsd.GSDFile(open(gsdfile, "rb"))
+        with open(gsdfile, "rb") as file:
+            f = gsd.pygsd.GSDFile(file)
         t = gsd.hoomd.HOOMDTrajectory(f)
 
         snap = t[frame]
