@@ -26,7 +26,7 @@ jobs:
       uses: goanpeca/setup-miniconda@v1.6.0
       with:
         # https://github.com/goanpeca/setup-miniconda
-        activate-environment: cmelab
+        activate-environment: cme-notebook
         environment-file: environment.yml
         auto-activate-base: false
     
