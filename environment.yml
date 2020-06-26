@@ -1,4 +1,4 @@
-name: cmelab
+name: cme-notebook
 channels:
   - conda-forge
   - mosdef
