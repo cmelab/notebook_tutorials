@@ -42,6 +42,7 @@ jobs:
       run: |
           python -m pip install nbval pytest
           # skip opv sim until we have a working image with GAFF-foyer
-          ls
-          python -m pytest -v --nbval-lax radial-distribution-function.ipynb, MD_intro.ipynb, temperature-thermostat.ipynb
+          python -m pytest -v --nbval-lax radial-distribution-function.ipynb
+          python -m pytest -v --nbval-lax MD_intro.ipynb
+          python -m pytest -v --nbval-lax temperature-thermostat.ipynb
 
