@@ -1,6 +1,6 @@
 # Notebook Tutorials
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cmelab/notebook_tutorials/master) ![CI](https://github.com/cmelab/notebook_tutorials/workflows/CI/badge.svg)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cmelab/notebook_tutorials/master) [![CI](https://github.com/cmelab/notebook_tutorials/workflows/CI/badge.svg)](https://github.com/cmelab/notebook_tutorials/actions)
 
 Use the binder above to use these notebooks in your browser.
 
@@ -15,8 +15,10 @@ jupyter lab
 ```
 
 ## Tutorials
-
-1. Intro to Molecular Dynamics - (WIP)
-1. Radial Distribution Function - 
-1. Organic Photovoltaic Simulation - The `opv_sim.ipynb` notebook demonstrates how to set up, run, and analyze a molecular dynamics simulation of a conjugated polymer. The following tools from [MoSDeF](https://mosdef.org/) and [Glotzer group](https://github.com/glotzerlab) are higlighted: 
+These tutorials highlight the following tools from [MoSDeF](https://mosdef.org/) and [Glotzer group](https://github.com/glotzerlab): 
 [mbuild](https://mbuild.mosdef.org/en/stable/), [foyer](https://foyer.mosdef.org/en/latest/), [hoomd](https://hoomd-blue.readthedocs.io/en/stable/), [freud](https://freud.readthedocs.io/en/stable/fresnel), [fresnel](https://fresnel.readthedocs.io/en/stable/)
+
+1. Intro to Molecular Dynamics - (WIP) `MD_intro.ipynb`
+1. Radial Distribution Function - `radial-distribution-function.ipynb` demonstrates how to calculate the RDF and shows how the temperature affects the system
+1. Organic Photovoltaic Simulation - `opv_sim.ipynb` demonstrates how to set up, run, and analyze a molecular dynamics simulation of a conjugated polymer. 
+1. Temperature/Thermostat - `temperature-thermostat.ipynb`
