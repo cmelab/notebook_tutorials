@@ -22,8 +22,8 @@ jobs:
       - name: update jupyter dependencies with repo2docker
         uses: jupyterhub/repo2docker-action@master
         with:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          INPUT_DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          INPUT_DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           IMAGE_NAME: "cmelab/notebook-tutorials"
   
   test:
