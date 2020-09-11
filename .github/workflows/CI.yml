@@ -14,8 +14,8 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    container: cmelab/notebook-tutorials
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,8 +26,5 @@ jobs:
       shell: bash -l {0}
       run: |
           python -m pip install nbval pytest
-          # skip opv sim until we have a working image with GAFF-foyer
-          python -m pytest -v --nbval-lax radial-distribution-function.ipynb
-          python -m pytest -v --nbval-lax MD_intro.ipynb
-          python -m pytest -v --nbval-lax temperature-thermostat.ipynb
+          python -m pytest -v --nbval-lax
 
