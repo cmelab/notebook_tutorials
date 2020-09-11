@@ -12,7 +12,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  construct-container:
+  cache-mybinder:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR
@@ -22,12 +22,14 @@ jobs:
       - name: update jupyter dependencies with repo2docker
         uses: jupyterhub/repo2docker-action@master
         with:
-          DOCKER_USERNAME: jennyfothergill
-          DOCKER_PASSWORD: 44f5e6f3-0ff6-4019-9753-8556d94f0000
-          IMAGE_NAME: "cmelab/notebook-tutorials"
+          NO_PUSH: 'true'
+          MYBINDERORG_TAG: ${{ github.event.ref }}
+          #DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          #DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          #IMAGE_NAME: "cmelab/notebook-tutorials"
   
   test:
-    needs: [construct-container]
+    #needs: [construct-container]
     runs-on: ubuntu-latest
     container: cmelab/notebook-tutorials
 
@@ -39,4 +41,3 @@ jobs:
     - name: test notebooks
       shell: bash -l {0}
       run: python -m pytest -v --nbval-lax
-
