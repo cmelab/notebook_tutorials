@@ -23,7 +23,7 @@ jobs:
         uses: jupyterhub/repo2docker-action@master
         with:
           DOCKER_USERNAME: jennyfothergill
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKER_PASSWORD: 44f5e6f3-0ff6-4019-9753-8556d94f0000
           IMAGE_NAME: "cmelab/notebook-tutorials"
   
   test:
