@@ -35,10 +35,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    
+
     - name: test notebooks
       shell: bash -l {0}
-      run: |
-          python -m pip install nbval pytest
-          python -m pytest -v --nbval-lax
+      run: python -m pytest -v --nbval-lax
 
