@@ -28,6 +28,7 @@ jobs:
           IMAGE_NAME: "cmelab/notebook-tutorials"
   
   test:
+    needs: [construct-container]
     runs-on: ubuntu-latest
     container: cmelab/notebook-tutorials
 
