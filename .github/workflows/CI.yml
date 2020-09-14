@@ -44,6 +44,5 @@ jobs:
           # skip opv sim until we have a working image with GAFF-foyer
           python -m pytest -v --nbval-lax radial-distribution-function.ipynb
           python -m pytest -v --nbval-lax MD_intro.ipynb
-          python -m pytest -v --nbval-lax MD_density.ipynb
           python -m pytest -v --nbval-lax temperature-thermostat.ipynb
 
