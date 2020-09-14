@@ -18,7 +18,8 @@ jupyter lab
 These tutorials highlight the following tools from [MoSDeF](https://mosdef.org/) and [Glotzer group](https://github.com/glotzerlab): 
 [mbuild](https://mbuild.mosdef.org/en/stable/), [foyer](https://foyer.mosdef.org/en/latest/), [hoomd](https://hoomd-blue.readthedocs.io/en/stable/), [freud](https://freud.readthedocs.io/en/stable/fresnel), [fresnel](https://fresnel.readthedocs.io/en/stable/)
 
-1. Intro to Molecular Dynamics - (WIP) `MD_intro.ipynb`
+1. Initializing a system to a specific density - `MD_density.ipynb` This tutorial will explain some of the common pitfalls of initializing a system at high density and how to overcome them by using a "shrink step."
 1. Radial Distribution Function - `radial-distribution-function.ipynb` demonstrates how to calculate the RDF and shows how the temperature affects the system
 1. Organic Photovoltaic Simulation - `opv_sim.ipynb` demonstrates how to set up, run, and analyze a molecular dynamics simulation of a conjugated polymer. 
 1. Temperature/Thermostat - `temperature-thermostat.ipynb`
+1. Intro to Molecular Dynamics - (WIP) `MD_intro.ipynb`

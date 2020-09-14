@@ -235,38 +235,38 @@ def gsd_rdf(gsdfile, A_name, B_name, start=0, stop=None, rmax=None, bins=50):
     """
     with open(gsdfile, "rb") as file:
         f = gsd.pygsd.GSDFile(file)
-    t = gsd.hoomd.HOOMDTrajectory(f)
-    snap = t[0]
-    if start < -len(t):
-        raise IndexError(
-                f"Can't index beyond first frame: {len(t)} frames in gsd file"
-                )
-    if rmax is None:
-        rmax = max(snap.configuration.box[:3]) * 0.45
+        t = gsd.hoomd.HOOMDTrajectory(f)
+        snap = t[0]
+        if start < -len(t):
+            raise IndexError(
+                    f"Can't index beyond first frame: {len(t)} frames in gsd file"
+                    )
+        if rmax is None:
+            rmax = max(snap.configuration.box[:3]) * 0.45
 
-    rdf = freud.density.RDF(bins, rmax)
+        rdf = freud.density.RDF(bins, rmax)
 
-    if stop is None:
-        stop = len(t) - 1
-    if start < 0:
-        start += len(t)
-    for frame in range(start, stop):
-        snap = t[frame]
-        box = freud.box.Box(*snap.configuration.box)
-        A_pos = snap.particles.position[
-                snap.particles.typeid == snap.particles.types.index(A_name)
-                ]
-        pos = A_pos
-        if A_name != B_name:
-            B_pos = snap.particles.position[
-                    snap.particles.typeid == snap.particles.types.index(B_name)
+        if stop is None:
+            stop = len(t) - 1
+        if start < 0:
+            start += len(t)
+        for frame in range(start, stop):
+            snap = t[frame]
+            box = freud.box.Box(*snap.configuration.box)
+            A_pos = snap.particles.position[
+                    snap.particles.typeid == snap.particles.types.index(A_name)
                     ]
-            pos = np.concatenate((A_pos, B_pos))
+            pos = A_pos
+            if A_name != B_name:
+                B_pos = snap.particles.position[
+                        snap.particles.typeid == snap.particles.types.index(B_name)
+                        ]
+                pos = np.concatenate((A_pos, B_pos))
 
-        n_query = freud.locality.AABBQuery.from_system((
-            box, pos
-        ))
-        rdf.compute(n_query, reset=False)
+            n_query = freud.locality.AABBQuery.from_system((
+                box, pos
+            ))
+            rdf.compute(n_query, reset=False)
     return rdf
 
 
