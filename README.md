@@ -1,6 +1,6 @@
 # Notebook Tutorials
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cmelab/notebook_tutorials/master) [![CI](https://github.com/cmelab/notebook_tutorials/workflows/CI/badge.svg)](https://github.com/cmelab/notebook_tutorials/actions)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cmelab/notebook_tutorials/master) [![CI](https://github.com/cmelab/notebook_tutorials/workflows/CI/badge.svg?branch=master)](https://github.com/cmelab/notebook_tutorials/workflows/CI/badge.svg?branch=master)
 
 Use the binder above to use these notebooks in your browser.
 
