@@ -31,7 +31,10 @@ jobs:
   test:
     #needs: [construct-container]
     runs-on: ubuntu-latest
-    container: cmelab/notebook-tutorials
+    container: 
+      image: cmelab/notebook-tutorials
+      options: --user joyvan
+    
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
