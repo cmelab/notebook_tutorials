@@ -14,7 +14,7 @@ dependencies:
   - fresnel
   - gsd
   - mbuild
-  - hoomd
+  - hoomd<3
   - openbabel
   - py3Dmol
   - nodejs>=10
