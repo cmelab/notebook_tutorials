@@ -19,6 +19,7 @@ dependencies:
   - py3Dmol
   - nodejs>=10
   - jupyterlab
+  - jupyter-offlinenotebook
   - pip:
     - nbval
     - pytest
