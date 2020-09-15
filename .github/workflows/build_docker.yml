@@ -16,6 +16,6 @@ jobs:
         with:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          BINDER_CACHE: true
+          MYBINDERORG_TAG: ${{ github.event.ref }}
           PUBLIC_REGISTRY_CHECK: true
           IMAGE_NAME: "cmelab/notebook-tutorials"
