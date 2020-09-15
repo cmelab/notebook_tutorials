@@ -22,4 +22,3 @@ These tutorials highlight the following tools from [MoSDeF](https://mosdef.org/)
 1. Radial Distribution Function - `radial-distribution-function.ipynb` demonstrates how to calculate the RDF and shows how the temperature affects the system
 1. Organic Photovoltaic Simulation - `opv_sim.ipynb` demonstrates how to set up, run, and analyze a molecular dynamics simulation of a conjugated polymer. 
 1. Temperature/Thermostat - (WIP) `temperature-thermostat.ipynb`
-1. Intro to Molecular Dynamics - (WIP) `MD_intro.ipynb`
