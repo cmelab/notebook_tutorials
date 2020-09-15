@@ -1,38 +1,27 @@
-# This is a basic workflow to help you get started with Actions
+name: Test PR and Image
 
-name: CI
+on: [pull_request_target]
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  cache-mybinder:
+  build-image:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-      - name: update jupyter dependencies with repo2docker
+      - name: Build Image
         uses: jupyterhub/repo2docker-action@master
         with:
-          NO_PUSH: 'true'
-          MYBINDERORG_TAG: ${{ github.event.ref }}
-          #DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          #DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          #IMAGE_NAME: "cmelab/notebook-tutorials"
+          LATEST_TAG_OFF: 'true'
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          IMAGE_NAME: "cmelab/notebook-tutorials"
   
   test:
-    #needs: [construct-container]
     runs-on: ubuntu-latest
     container: 
-      image: cmelab/notebook-tutorials    
+      image: cmelab/notebook-tutorials:${{ github.event.pull_request.head.sha }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
