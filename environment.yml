@@ -23,3 +23,5 @@ dependencies:
     - nbval
     - pytest
     - "--editable=git+https://github.com/rsdefever/GAFF-foyer.git#egg=gaff_foyer-master"
+    - pytest
+    - nbval
