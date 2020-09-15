@@ -1,10 +1,11 @@
 name: Test PR and Image
 
 on:
-  pull_request:
-    branches: [ master ]
   push:
     branches: [ master ]
+  pull_request_target:
+    branches: [ master ]
+
 
 jobs:
   build-image:
