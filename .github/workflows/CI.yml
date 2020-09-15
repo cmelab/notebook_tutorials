@@ -19,6 +19,7 @@ jobs:
           IMAGE_NAME: "cmelab/notebook-tutorials"
   
   test:
+    needs: [build-image]
     runs-on: ubuntu-latest
     container: 
       image: cmelab/notebook-tutorials:${{ github.event.pull_request.head.sha }}
