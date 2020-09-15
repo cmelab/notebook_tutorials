@@ -21,8 +21,10 @@ jobs:
   test:
     needs: [build-image]
     runs-on: ubuntu-latest
+    env: 
+      SHORT_HASH: $(echo "${GITHUB_SHA}" | cut -c1-12)
     container: 
-      image: cmelab/notebook-tutorials:${{ github.event.pull_request.head.sha }}
+      image: cmelab/notebook-tutorials:$SHORT_HASH
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
