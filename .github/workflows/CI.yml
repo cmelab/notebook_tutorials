@@ -3,6 +3,9 @@ name: Test PR and Image
 on:
   pull_request_target:
     branches: [ master ]
+  push:
+    branches: [ master ]
+
 jobs:
   build-image:
     runs-on: ubuntu-latest
