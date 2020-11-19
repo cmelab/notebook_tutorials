@@ -13,6 +13,7 @@ dependencies:
   - freud
   - fresnel
   - gsd
+  - ipython==7.10.0 # temporary fix for deprecation error
   - mbuild
   - hoomd<3
   - openbabel
